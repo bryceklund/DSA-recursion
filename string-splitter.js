@@ -17,3 +17,5 @@ function splitString(str, sep, idx=0, arr=[], acc=[]) {
 splitString('i{love{to{eat{lemons', '{')
 
 //this one was fun. i just wrote a higher-order function?!?!
+
+module.exports = splitString
