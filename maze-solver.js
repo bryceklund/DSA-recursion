@@ -1,5 +1,5 @@
 function solveMaze(maze, acc=[], x=0, y=0) {
-    if (maze[y][x] === 'e') { 
+    if (maze[y][x] === 'e') {
         //base case
         return `A possible solution to the maze is: ${acc}`
     } else if (maze[y][x + 1] === ' ' || maze[y][x + 1] === 'e') { 
@@ -20,5 +20,15 @@ function solveMaze(maze, acc=[], x=0, y=0) {
         return solveMaze(maze, acc, x, y - 1) 
     }
 }
+
+const testMaze = [
+    [' ', ' ', ' ', '*', ' ', ' ', ' '],
+    ['*', '*', ' ', '*', ' ', '*', ' '],
+    [' ', ' ', ' ', ' ', ' ', ' ', ' '],
+    [' ', '*', '*', '*', '*', '*', ' '],
+    [' ', ' ', ' ', ' ', ' ', ' ', 'e']
+]
+
+console.log(solveMaze(testMaze))
 
 module.exports = solveMaze
